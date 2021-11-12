@@ -1,0 +1,15 @@
+$widths: 80, 100;
+$floatWidths: 33, 66;
+
+.wid {
+  @each $w in $widths {
+    &--#{$w} {
+      width: #{$w + '%'};
+    }
+  }
+  @each $w in $floatWidths {
+    &--#{$w} {
+      width: #{$w + '.' + $w + '%'};
+    }
+  }
+}
